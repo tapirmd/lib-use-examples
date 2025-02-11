@@ -1,0 +1,18 @@
+.{
+    .name = "tmd-fmt-test",
+    .version = "0.0.1",
+    .minimum_zig_version = "0.14.0",
+
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "main.zig",
+    },
+    
+    .dependencies = .{
+        .tmd = .{
+            .url = "https://github.com/tapirmd/tmd/archive/0db9e367830359a7ebf3a6d3ad0ec19363a330d2.zip",
+            .hash = "12207947d21b7bc8c7f97f2249411e2b3cd3cbd0e573d0b35d8578ff4dd6583e7d9e",
+        },
+    },
+}
