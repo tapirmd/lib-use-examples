@@ -12,7 +12,7 @@ pub fn build(b: *std.Build) !void {
     // cmd (the default target)
 
     const tmdCommand = b.addExecutable(.{
-        .name = "tmd-fmt-tests",
+        .name = "tmd-lib-use",
         .root_source_file = b.path("main.zig"),
         .target = target,
         .optimize = optimize,
