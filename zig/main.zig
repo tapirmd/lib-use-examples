@@ -16,8 +16,6 @@ pub fn main() !void {
     var tmdDoc = try tmd.Doc.parse(tmdContent, allocator);
     defer tmdDoc.destroy();
 
-    const option_full_html = false;
-    const option_support_custom_blocks = false;
     const stdoutWriter = std.io.getStdOut().writer();
-    try tmdDoc.toHTML(stdoutWriter, option_full_html, option_support_custom_blocks, "", allocator);
+    try tmdDoc.writeHTML(stdoutWriter, .{}, allocator);
 }

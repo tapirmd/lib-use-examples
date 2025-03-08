@@ -4,10 +4,10 @@ pub fn build(b: *std.Build) !void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
     
-    const tmd = b.dependency("tmd", .{
+    const tmdModule = b.dependency("tmd", .{
 		.target = target,
 		.optimize = optimize,
-	});
+	}).module("tmd");
 
     // cmd (the default target)
 
@@ -17,7 +17,7 @@ pub fn build(b: *std.Build) !void {
         .target = target,
         .optimize = optimize,
     });
-    tmdCommand.root_module.addImport("tmd", tmd.module("tmd"));
+    tmdCommand.root_module.addImport("tmd", tmdModule);
     b.installArtifact(tmdCommand);
 
     // run cmd
