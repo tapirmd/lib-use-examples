@@ -12,8 +12,8 @@
     
     .dependencies = .{
         .tmd = .{
-            .url = "https://github.com/tapirmd/tmd/archive/refs/tags/v0.0.5.zip",
-            .hash = "tmd-0.0.3-vgxEXd0YBQDhMS2T2_nYyVljEzP7QiFiKXvAvW2HAAyl"
+            .url = "https://github.com/tapirmd/tmd/archive/refs/tags/v0.0.6.zip",
+            .hash = "tmd-0.0.6-vgxEXeQdBQA8LsIF2K0D_zLh8ejCk4rz2WXUMxWTLwkR",
         },
     },
 }
